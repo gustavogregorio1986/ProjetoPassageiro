@@ -1,6 +1,8 @@
 ﻿using ProjetoEstudo.Data;
 using ProjetoEstudo.Models;
 using ProjetoEstudo.Repositorio.Interface;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjetoEstudo.Repositorio
 {
@@ -19,6 +21,11 @@ namespace ProjetoEstudo.Repositorio
             _bancoContext.SaveChanges();
 
             return passageiro;
+        }
+
+        public List<PassageiroModel> ListarTodos()
+        {
+            return _bancoContext.Passageiros.ToList();
         }
     }
 }

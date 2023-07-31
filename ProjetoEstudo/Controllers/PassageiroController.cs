@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjetoEstudo.Models;
 using ProjetoEstudo.Repositorio.Interface;
+using System.Collections.Generic;
 
 namespace ProjetoEstudo.Controllers
 {
@@ -41,7 +42,8 @@ namespace ProjetoEstudo.Controllers
 
         public IActionResult Consultar()
         {
-            return View();
+            List<PassageiroModel> listar = _passageiroRepositorio.ListarTodos();
+            return View(listar);
         }
     }
 }
