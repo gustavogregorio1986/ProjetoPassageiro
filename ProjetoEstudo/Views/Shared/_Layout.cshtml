@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - ProjetoEstudo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -40,12 +41,13 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - ProjetoEstudo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Desenvolvido por Gustavo Gregório
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+     <script src="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

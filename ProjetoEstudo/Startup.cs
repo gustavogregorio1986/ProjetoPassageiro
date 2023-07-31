@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjetoEstudo.Data;
+using ProjetoEstudo.Repositorio;
+using ProjetoEstudo.Repositorio.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +29,7 @@ namespace ProjetoEstudo
         {
             services.AddControllersWithViews();
             services.AddDbContext<BancoContext>(option => option.UseSqlServer(Configuration.GetConnectionString("Database")));
+            services.AddScoped<IPassageiroRepositorio, PassageiroRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
