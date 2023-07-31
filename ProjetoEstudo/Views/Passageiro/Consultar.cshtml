@@ -6,6 +6,26 @@
     <h2 class="display-4">Consultar Pasageiro</h2>
 </div>
 
+  <br/>
+
+    @if(TempData["MensagemSucesso"] != null)
+    {
+         <div class="alert alert-success" role="alert">
+           <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+           @TempData["MensagemSucesso"]
+        </div>   
+    }
+
+    @if(TempData["MensagemErro"] != null)
+    {
+         <div class="alert alert-success" role="alert">
+           <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+           @TempData["MensagemErro"]
+        </div>   
+    }
+
+    <br/>
+
 <table class="table" id="table-passageiros">
   <thead>
     <tr>
