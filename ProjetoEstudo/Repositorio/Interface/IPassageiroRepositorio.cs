@@ -12,5 +12,7 @@ namespace ProjetoEstudo.Repositorio.Interface
         PassageiroModel ListarPorId(int id);
 
         PassageiroModel Atualizar(PassageiroModel passageiro);
+
+        bool Apagar(int id);
     }
 }

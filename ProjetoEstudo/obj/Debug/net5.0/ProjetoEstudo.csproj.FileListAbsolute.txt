@@ -72,3 +72,4 @@ C:\ProjetoEstudoWeb\ProjetoEstudo\ProjetoEstudo\obj\Debug\net5.0\ProjetoEstudo.p
 C:\ProjetoEstudoWeb\ProjetoEstudo\ProjetoEstudo\obj\Debug\net5.0\ProjetoEstudo.genruntimeconfig.cache
 C:\ProjetoEstudoWeb\ProjetoEstudo\ProjetoEstudo\obj\Debug\net5.0\ref\ProjetoEstudo.dll
 C:\ProjetoEstudoWeb\ProjetoEstudo\ProjetoEstudo\obj\Debug\net5.0\Razor\Views\Passageiro\Editar.cshtml.g.cs
+C:\ProjetoEstudoWeb\ProjetoEstudo\ProjetoEstudo\obj\Debug\net5.0\Razor\Views\Passageiro\ApagarConfirmacao.cshtml.g.cs

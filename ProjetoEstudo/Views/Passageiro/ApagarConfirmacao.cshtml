@@ -1,0 +1,12 @@
+﻿@model PassageiroModel
+@{
+    ViewData["Title"] = "Apagar Registro Passageiro";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Confirmação da deleção(@Model.Nome)?</h2>
+</div>
+
+
+<a role="button" asp-controller="Passageiro" asp-action="Consultar" class="btn btn-danger btn-block">Voltar</a>
+<a role="button" asp-controller="Passageiro" asp-action="Apagar" class="btn btn-primary btn-block">Confirmação da exlusão</a>

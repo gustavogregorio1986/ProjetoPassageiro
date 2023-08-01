@@ -19,6 +19,12 @@ namespace ProjetoEstudo.Controllers
             return View();
         }
 
+        public IActionResult ApagarConfirmacao(int id)
+        {
+            PassageiroModel passageiro = _passageiroRepositorio.ListarPorId(id);
+            return View(passageiro);
+        }
+
         [HttpPost]
         public IActionResult Cadastrar(PassageiroModel passageiro)
         {

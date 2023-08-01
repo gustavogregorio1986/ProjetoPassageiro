@@ -23,6 +23,18 @@ namespace ProjetoEstudo.Repositorio
             return passageiro;
         }
 
+        public bool Apagar(int id)
+        {
+            PassageiroModel passageirodb = ListarPorId(id);
+
+            if (passageirodb == null) throw new System.Exception("Houve um erro para apagar o passageiro");
+
+            _bancoContext.Passageiros.Remove(passageirodb);
+            _bancoContext.SaveChanges();
+
+            return true;
+        }
+
         public PassageiroModel Atualizar(PassageiroModel passageiro)
         {
             PassageiroModel passageirodb = ListarPorId(passageiro.Id);
