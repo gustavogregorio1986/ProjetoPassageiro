@@ -23,6 +23,30 @@ namespace ProjetoEstudo.Repositorio
             return passageiro;
         }
 
+        public PassageiroModel Atualizar(PassageiroModel passageiro)
+        {
+            PassageiroModel passageirodb = ListarPorId(passageiro.Id);
+
+            if (passageirodb == null) throw new System.Exception("Houve erro ao autalizar o passageiro");
+
+            passageirodb.Nome = passageiro.Nome;
+            passageirodb.Email = passageiro.Email;
+            passageirodb.NumeroPoltrona = passageiro.NumeroPoltrona;
+            passageirodb.Compania = passageiro.Compania;
+            passageirodb.Origem = passageiro.Origem;
+            passageirodb.Destino = passageiro.Destino;
+
+            _bancoContext.Passageiros.Update(passageirodb);
+            _bancoContext.SaveChanges();
+
+            return passageirodb;
+        }
+
+        public PassageiroModel ListarPorId(int id)
+        {
+            return _bancoContext.Passageiros.FirstOrDefault(x => x.Id == id);
+        }
+
         public List<PassageiroModel> ListarTodos()
         {
             return _bancoContext.Passageiros.ToList();

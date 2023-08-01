@@ -45,5 +45,32 @@ namespace ProjetoEstudo.Controllers
             List<PassageiroModel> listar = _passageiroRepositorio.ListarTodos();
             return View(listar);
         }
+
+        public IActionResult Editar(int id)
+        {
+            PassageiroModel passageiro = _passageiroRepositorio.ListarPorId(id);
+            return View(passageiro);
+        }
+
+        [HttpPost]
+        public IActionResult Alterar(PassageiroModel passageiro)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _passageiroRepositorio.Atualizar(passageiro);
+                    TempData["MensagemSucesso"] = "Passageiro atualizado com sucesso";
+                    return RedirectToAction("Consultar");
+                }
+            }
+            catch (System.Exception erro)
+            {
+                TempData["MensagemErro"] = $"Passageiro não foi atualizado, tente novamente, erro: {erro.Message}";
+                return RedirectToAction("Consultar");
+            }
+
+            return View("Editar", passageiro);
+        }
     }
 }

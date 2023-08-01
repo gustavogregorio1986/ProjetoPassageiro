@@ -56,7 +56,7 @@
                   <td>@passageiro.Origem</td>
                   <td>@passageiro.Destino </td>
                   <td>
-                     <a role="button" class="btn btn-primary">Editar</a>
+                     <a role="button" asp-controller="Passageiro" asp-action="Editar" asp-route-id="@passageiro.Id" class="btn btn-primary">Editar</a>
                      <a role="button" class="btn btn-danger">Apagar</a>
                  </td>
                </tr>  

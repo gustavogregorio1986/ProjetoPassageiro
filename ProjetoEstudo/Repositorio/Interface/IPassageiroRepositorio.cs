@@ -8,5 +8,9 @@ namespace ProjetoEstudo.Repositorio.Interface
         PassageiroModel Adicionar(PassageiroModel passageiro);
 
         List<PassageiroModel> ListarTodos();
+
+        PassageiroModel ListarPorId(int id);
+
+        PassageiroModel Atualizar(PassageiroModel passageiro);
     }
 }

@@ -1,0 +1,48 @@
+﻿@model PassageiroModel
+@{
+    ViewData["Title"] = "Editar Passageiro";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Editar Pasageiro</h2>
+</div>
+
+<form asp-controller="Passageiro" asp-action="Alterar" method="post">
+  <input type="hidden" asp-for="Id"/>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o Nome">
+    @Html.ValidationMessageFor(x => x.Nome)
+  </div>
+  <div class="form-group">
+    <label for="e-mail">E-mail</label>
+    <input type="text" asp-for="Email" class="form-control" placeholder="Digite o Email">
+    @Html.ValidationMessageFor(x => x.Email)
+  </div>
+  <div class="form-group">
+    <label for="cpf">Cpf</label>
+    <input type="text" asp-for="Cpf" class="form-control" placeholder="Digite o Cpf">
+    @Html.ValidationMessageFor(x => x.Cpf)
+  </div>
+  <div class="form-group">
+    <label for="numeroPoltrona">Numero da Poltrona</label>
+    <input type="text" asp-for="NumeroPoltrona" class="form-control" placeholder="Digite o numero da Poltrona">
+    @Html.ValidationMessageFor(x => x.NumeroPoltrona)
+  </div>
+  <div class="form-group">
+    <label for="compania">Compania</label>
+    <input type="text" asp-for="Compania" class="form-control" placeholder="Digite a Compania">
+    @Html.ValidationMessageFor(x => x.Compania)
+  </div>
+  <div class="form-group">
+    <label for="origem">Origem</label>
+    <input type="text" asp-for="Origem" class="form-control" placeholder="Digite a Origem">
+    @Html.ValidationMessageFor(x => x.Origem)
+  </div>
+  <div class="form-group">
+    <label for="origem">Destino</label>
+    <input type="text" asp-for="Destino" class="form-control" placeholder="Digite o Destino">
+    @Html.ValidationMessageFor(x => x.Destino)
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
